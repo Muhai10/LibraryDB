@@ -16,8 +16,8 @@ const Pagination = (props) => {
         }}>{i}</button>)
     }
     return(
-        <div className="container">
-            <div className="row">{page_links}</div>
+        <div className="container" style={{alignSelf:"center"}}>
+            <div className="row" style={{alignSelf:"center"}}>{page_links}</div>
         </div>
     );
 };

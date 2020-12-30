@@ -2,24 +2,24 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const BookDetails = (props) => {
-    console.log("Book Details e achi vai "+props);
-    return (<div>
-        <div className="row">
-            <div className="col s12 m7">
-                <div className="card large">
+    return (
+    <div>
+        <div className="col">
+            <div className="col s12 m5" >
+                <div className="card huge"  style={{alignSelf:"center",backgroundColor:"white"}}>
                     <img
                         src={props.location.image}
                         alt=""
-                        style={{ width: "400", height: "800" }}
+                        style={{width: 320, height: 420, marginLeft:"40%" }}
                     />
                     <div></div>
-                    <span className="card-title">{props.location.title}</span>
+                    <span className="card-title" style={{fontWeight: "bold",marginLeft:"40%" }}>{props.location.title}</span>
                     <div></div>
-                    <span className="card-title">{props.location.author}</span>
+                    <span className="card-title" style={{marginLeft:"40%" }}><text>  Author: </text>{props.location.author}</span>
                     <div></div>
-                    <span className="card-title">{props.location.published}</span>
+                    <span className="card-title" style={{marginLeft:"40%" }}><text>  Published: </text>{props.location.published}</span>
 
-                    <div className="card-content">
+                    <div className="row card-content">
                         <p>{props.location.description}</p>
                     </div>
                     <div className="card-action">

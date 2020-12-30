@@ -17,14 +17,12 @@ const getBooksByTerm = (SearchTerm, setBooks,  startIndex, setTotalPages) => {
             startIndex: startIndex,
         },
     }).then((response) => {
-        console.log(response.data);
         setBooks(response.data.items);
-        setTotalPages(Math.ceil(response.data.totalItems/20));
+        setTotalPages(Math.ceil((response.data.totalItems/20)));
     })
 }
 
 const getBookDetails = (book_id, setCurrentBook) => {
-    console.log("API " +book_id);
     GoogleBooksAPI.get(''+book_id)
         .then((response) => {
             console.log("book ", response.data);
