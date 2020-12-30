@@ -1,19 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import MovieDetails from "./components/MovieDetails";
-import Navbar from "./components/Navbar";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import NavBar from "./components/NavBar";
+import BookDetails from "./components/BookDetails";
+import { BrowserRouter, Route } from 'react-router-dom';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Navbar />
+      <NavBar />
       <div>
         <Route path="/" exact component={App} />
-        <Route path="/movie/:id" exact component={MovieDetails} />
+        <Route path="/book/:id" exact component={BookDetails} />
       </div>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

@@ -1,29 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import {Link} from "react-router-dom";
 
-const Navbar = () => {
-  return (
-    <div>
-      <nav>
-        <div className="nav-wrapper">
-          <Link to="/" className="brand-logo" style={{ marginLeft: 20 }}>
-            Movie DB
-          </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
-              <a href="sass.html">Popular Movies</a>
-            </li>
-            <li>
-              <a href="badges.html">TV Shows</a>
-            </li>
-            <li>
-              <a href="collapsible.html">Profile</a>
-            </li>
-          </ul>
+const NavBar = () => {
+    return (
+        <div>
+            <nav>
+                <div class="nav-wrapper">
+                    <Link to="/" class="brand-logo center">Book Api</Link>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    </ul>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
-  );
-};
+    )
+}
 
-export default Navbar;
+export default NavBar;
